@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import InputHabit from './components/Inputs/InputHabit';
 import HabitList from './components/Habits/HabitList';
-import { get_date, compare_dates, debugDates } from './functions/utilFunctions';
+import { get_date, compare_dates } from './functions/utilFunctions';
 
 function App() {
 

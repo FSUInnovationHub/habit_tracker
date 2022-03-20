@@ -6,13 +6,13 @@ export const compare_dates = (d1, d2) => {
     const difference = date1.getTime() - date2.getTime()
 
     if(difference === 0){
-        console.log(`Habit has been done today`)
+        // console.log(`Habit has been done today`)
         return 'done'
     } else if(difference > two_days){
-        console.log(`Habit has expired`)
+        // console.log(`Habit has expired`)
         return 'expired'
     } else{
-        console.log(`Habit is still active`)
+        // console.log(`Habit is still active`)
         return 'active'
     }
 }
@@ -24,7 +24,6 @@ export const get_date = (date = new Date()) => {
 }
 
 export const debugDates = () => {
-    const today = new Date(2022, 2, 2)
     const yesterday = new Date(2022, 2,1)
     const two_days_ago = new Date(2022, 1, 28)
 
