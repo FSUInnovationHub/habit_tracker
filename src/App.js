@@ -40,7 +40,6 @@ function App() {
 
   useEffect(() => {
     let date = get_date()
-    console.log(habits)
     habits.forEach((habit, index) => {
       switch(compare_dates(new Date(date), new Date(habit.lastUpdated))){
         case 'done':
@@ -85,8 +84,8 @@ function App() {
     <div className="App" >
 
       <h1>Daily Habit Tracker</h1>
-      <button onClick={()=>console.log(habits)} >Click</button>
-      <button onClick={debugDates} >Debug</button>
+      {/* <button onClick={()=>console.log(habits)} >Click</button> */}
+      {/* <button onClick={debugDates} >Debug</button> */}
 
       <InputHabit value={newHabit.name} onChange={handle_change} onClick={add_habit} />
 
@@ -94,6 +93,10 @@ function App() {
 
         <HabitList list={habits} onClick={handle_click} />
       
+      </div>
+
+      <div>
+        <p>Created in The Innovation Hub</p>
       </div>
 
     </div>
