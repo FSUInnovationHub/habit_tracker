@@ -23,6 +23,7 @@ function App() {
     setNewHabit('')
     setHabits(habits_list)
     localStorage.setItem('habits', JSON.stringify(habits_list))
+    console.log(localStorage.getItem('habits'))
   }
 
   const handle_change = (e) => {
@@ -105,11 +106,3 @@ function App() {
 }
 
 export default App;
-
-const habit_object = {
-  name:'',
-  counter:0,
-  lastUpdated:'',
-  prevUpdated:'',
-  completed:false
-}
