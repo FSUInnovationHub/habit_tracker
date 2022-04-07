@@ -24,7 +24,7 @@ export const get_date = (date = new Date()) => {
 }
 
 export const debugDates = () => {
-    const today = new Date(2022, 2, 2)
+    // const today = new Date(2022, 2, 2)
     const yesterday = new Date(2022, 2,1)
     const two_days_ago = new Date(2022, 1, 28)
 
