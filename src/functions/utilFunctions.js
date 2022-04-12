@@ -24,21 +24,35 @@ export const get_date = (date = new Date()) => {
 }
 
 export const debugDates = () => {
-    const today = new Date(2022, 2, 2)
-    const yesterday = new Date(2022, 2,1)
-    const two_days_ago = new Date(2022, 1, 28)
+    // const today = new Date(2022, 2, 2)
+    const yesterday = new Date(2022, 3, 11)
+    const two_days_ago = new Date(2022, 3, 10)
 
     const habits = [
         {
-            name:'Run',
+            name:'Exercise',
             counter:1,
             lastUpdated:yesterday,
             prevUpdated:two_days_ago,
             completed:false
         },
         {
-            name:'Eat Healthy',
+            name:'Meditate',
+            counter:5,
+            lastUpdated:yesterday,
+            prevUpdated:yesterday,
+            completed:false
+          },
+          {
+            name:'Journaling',
             counter:3,
+            lastUpdated:yesterday,
+            prevUpdated:yesterday,
+            completed:false
+          },
+          {
+            name:'Read',
+            counter:7,
             lastUpdated:yesterday,
             prevUpdated:yesterday,
             completed:false
