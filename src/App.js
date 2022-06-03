@@ -2,10 +2,10 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import InputHabit from './components/Inputs/InputHabit';
 import HabitList from './components/Habits/HabitList';
-import { get_date, compare_dates, debugDates } from './functions/utilFunctions';
+import { get_date, compare_dates } from './functions/utilFunctions';
 
 function App() {
-  debugDates()
+
   const [ habits, setHabits ] = useState(JSON.parse(localStorage.getItem('habits')) || [])
   const [ newHabit, setNewHabit ] = useState('')
 
@@ -41,6 +41,7 @@ function App() {
       habits_list[key].counter -= 1
     }
     setHabits(habits_list)
+    console.log(habits_list)
     localStorage.setItem('habits', JSON.stringify(habits_list))
   }
 
@@ -52,7 +53,7 @@ function App() {
           let change = {
             ...habit, 
             counter:0, 
-            completed:false
+            completed:false,
           }
           setHabits(prevState => {
             let newState = [...prevState]
